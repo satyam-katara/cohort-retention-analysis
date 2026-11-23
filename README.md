@@ -1,5 +1,12 @@
 # Cohort Retention Analysis: Do Customers Come Back?
 
+![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![SSMS](https://img.shields.io/badge/SSMS-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Analysis_Complete-2EA44F?style=for-the-badge)
+
 > **Short answer: almost none do.** Only **3.12%** of customers placed more than one recorded order, and average Month 1 cohort retention was just **0.46%**.
 
 This project analyzes customer repeat-purchase behavior using the Olist Brazilian E-Commerce dataset and Microsoft SQL Server. The objective is to understand how customer retention changes across acquisition cohorts and identify opportunities to improve repeat purchases.
@@ -44,7 +51,7 @@ Customer retention is an important measure of business performance. Understandin
 | One-time customers | 93,099 (96.88%) |
 | Average Month 1 retention | 0.46% |
 
-**What the numbers tell us**
+### What the numbers tell us
 
 - **96.88% of customers placed only one recorded order.** This indicates a substantial repeat-purchase challenge.
 - **Month 1 retention averaged just 0.46%.** This is the unweighted average of cohort-level retention percentages across 21 cohorts with at least 100 customers.
@@ -60,7 +67,7 @@ The heatmap visualizes monthly customer retention across all 25 cohorts.
 
 ![Customer Cohort Retention Heatmap](visuals/cohort_retention_heatmap.png)
 
-**How to read the heatmap**
+### How to read the heatmap
 
 - Green: Higher retention
 - Yellow: Moderate retention
@@ -79,12 +86,12 @@ Month 0 represents the initial cohort and therefore has 100% retention. Month 1 
 - **Total order records:** 99,441
 - **Unique customers:** 96,096
 
-**Primary tables used**
+### Primary tables used
 
 - `olist_customers_dataset`
 - `olist_orders_dataset`
 
-**Important customer identifier distinction**
+### Important customer identifier distinction
 
 The analysis uses `customer_unique_id` as the customer identifier rather than `customer_id`.
 
@@ -207,7 +214,8 @@ cohort-retention-analysis/
 │   └── 03_cohort_insights.sql
 │
 ├── exports/
-│   └── cohort_retention_matrix.csv
+│   ├── cohort-retention-matrix.csv
+│   └── cohort-retention-matrix.xlsx
 │
 ├── visuals/
 │   └── cohort_retention_heatmap.png
